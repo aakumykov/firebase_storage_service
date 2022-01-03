@@ -170,7 +170,7 @@ public class FirebaseStorageService extends Service
         }
 
         showProgressNotification(
-                getString(R.string.firestore_service_deleting_file),
+                getString(R.string.firestore_service_deleting_file, fileName),
                 R.drawable.ic_firestore_service_progress);
 
         mRootRef
