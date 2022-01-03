@@ -1,4 +1,4 @@
-package com.github.aakumykov.firebase_storage_service_module.utils;
+package com.github.aakumykov.firebase_storage_service.utils;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

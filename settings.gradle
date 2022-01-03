@@ -7,4 +7,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "firebase_storage_service"
-include ':firebase_storage_service_module'
+include ':firebase_storage_service'

@@ -1,4 +1,4 @@
-package com.github.aakumykov.firebase_storage_service_module.firebase_storage_service;
+package com.github.aakumykov.firebase_storage_service.firebase_storage_service;
 
 import android.app.Service;
 import android.content.Intent;
@@ -14,11 +14,11 @@ import androidx.core.app.NotificationChannelGroupCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-import com.github.aakumykov.firebase_storage_service_module.CommonServiceBinder;
-import com.github.aakumykov.firebase_storage_service_module.R;
-import com.github.aakumykov.firebase_storage_service_module.iRemoteFileStorage;
-import com.github.aakumykov.firebase_storage_service_module.utils.ArgumentChecker;
-import com.github.aakumykov.firebase_storage_service_module.utils.NetworkUtils;
+import com.github.aakumykov.firebase_storage_service.CommonServiceBinder;
+import com.github.aakumykov.firebase_storage_service.R;
+import com.github.aakumykov.firebase_storage_service.iRemoteFileStorage;
+import com.github.aakumykov.firebase_storage_service.utils.ArgumentChecker;
+import com.github.aakumykov.firebase_storage_service.utils.NetworkUtils;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FileDownloadTask;
@@ -225,7 +225,7 @@ public class FirebaseStorageService extends Service
                 .addOnFailureListener(e -> {
                     hideProgressNotification();
 
-                    if (FirebaseStorageUtils.isFileNotFound((StorageException) e))
+                    if (com.github.aakumykov.firebase_storage_service.firebase_storage_service.FirebaseStorageUtils.isFileNotFound((StorageException) e))
                         callbacks.onFileNoesNotExists();
                     else {
                         String errorMsg = firestoreErrorDetails(e);

@@ -1,4 +1,4 @@
-package com.github.aakumykov.firebase_storage_service_module.utils;
+package com.github.aakumykov.firebase_storage_service.utils;
 
 public class ArgumentChecker {
 
