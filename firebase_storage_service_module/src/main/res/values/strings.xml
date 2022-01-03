@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="firestore_service_notifications_group_name">Работа службы</string>
+    <string name="firestore_service_notifications_group_description">Уведомления о работе службы</string>
+
+    <string name="firestore_service_progress_notifications_channel_name">Прогресс</string>
+    <string name="firestore_service_progress_notifications_channel_description">Уведомления о процессе работы простой службы</string>
+
+    <string name="firestore_service_results_notifications_channel_name">Результаты</string>
+    <string name="firestore_service_results_notifications_channel_description">Уведомления о результатах работы простой службы</string>
+
+    <string name="error_no_network_unavailable">Сеть недоступна</string>
+
+    <string name="file_uploading_service_uploading_progress">Отправка файла %1$s</string>
+    <string name="file_uploading_service_uploading_success">Файл отправлен %1$s</string>
+    <string name="file_uploading_service_uploading_error">Ошибка отправки файла %1$s</string>
+
+    <string name="firestore_service_deleting_file">Удаляется файл %1$s</string>
+    <string name="firestore_service_deleting_file_error">Ошибка удаления файла %1$s</string>
+
+    <string name="firestore_service_getting_file">Загрузка файла %1$s</string>
+    <string name="firestore_service_getting_file_error">Ошибка загрузки файла %1$s</string>
+
+    <string name="firestore_service_checking_file">Проверка наличия файла %1$s</string>
+    <string name="firestore_service_checking_file_error">Ошибка проверки наличия файла %1$s</string>
+    <string name="firestore_service_error_code_and_message">%1$s: %2$s</string>
+</resources>
