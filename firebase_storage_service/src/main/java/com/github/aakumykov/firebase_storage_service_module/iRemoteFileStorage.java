@@ -1,4 +1,4 @@
-package com.github.aakumykov.firebase_storage_service;
+package com.github.aakumykov.firebase_storage_service_module;
 
 import androidx.annotation.NonNull;
 

@@ -1,5 +1,5 @@
 
-package com.github.aakumykov.firebase_storage_service;
+package com.github.aakumykov.firebase_storage_service_module;
 
 import android.app.Service;
 import android.os.Binder;

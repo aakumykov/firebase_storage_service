@@ -1,4 +1,4 @@
-package com.github.aakumykov.firebase_storage_service.firebase_storage_service;
+package com.github.aakumykov.firebase_storage_service_module.firebase_storage_service;
 
 import com.google.firebase.storage.StorageException;
 
