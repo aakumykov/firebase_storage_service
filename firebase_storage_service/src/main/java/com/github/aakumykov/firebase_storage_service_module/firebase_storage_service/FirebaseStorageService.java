@@ -71,6 +71,8 @@ public class FirebaseStorageService extends Service
         ArgumentChecker.checkNotNull(localFilePath);
         ArgumentChecker.checkNotNull(callbacks);
 
+        checkIsInitialized();
+
         if (NetworkUtils.networkIsUnavailable(this)) {
             callbacks.onAddFileError(getString(R.string.error_no_network_unavailable));
             return;
@@ -119,6 +121,8 @@ public class FirebaseStorageService extends Service
     {
         ArgumentChecker.checkNotNull(fileName);
 
+        checkIsInitialized();
+
         if (noNetwork())  {
             callbacks.onGetFileError(getString(R.string.error_no_network_unavailable));
             return;
@@ -164,6 +168,8 @@ public class FirebaseStorageService extends Service
         ArgumentChecker.checkNotNull(fileName);
         ArgumentChecker.checkNotNull(callbacks);
 
+        checkIsInitialized();
+
         if (noNetwork()) {
             callbacks.onDeleteFileError(getString(R.string.error_no_network_unavailable));
             return;
@@ -201,6 +207,8 @@ public class FirebaseStorageService extends Service
     public void hasFile(@NonNull String fileName, @NonNull HasFileCallbacks callbacks) {
         ArgumentChecker.checkNotNull(fileName);
         ArgumentChecker.checkNotNull(callbacks);
+
+        checkIsInitialized();
 
         if (noNetwork()) {
             callbacks.onFileExistCheckError(getString(R.string.error_no_network_unavailable));
@@ -343,5 +351,14 @@ public class FirebaseStorageService extends Service
 
     private boolean noNetwork() {
         return NetworkUtils.networkIsUnavailable(this);
+    }
+
+
+    private void checkIsInitialized() {
+
+        String className = FirebaseStorageService.class.getSimpleName();
+
+        if (null == mRootRef || null == mLocalTempDir)
+            throw new IllegalStateException(className+" is not initialized. You must call init() method first");
     }
 }
